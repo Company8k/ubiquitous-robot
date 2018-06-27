@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.apimedic</groupId>
+  <artifactId>symptomchecker</artifactId>
+  <version>0.1-alpha</version>
+  <packaging>jar</packaging>
+  
+  <properties>
+    <jackson-2-version>2.7.1</jackson-2-version>
+  </properties>
+  
+  <distributionManagement>
+    <repository>
+      <id>bintray-8k-maven</id>
+      <name>8K-maven</name>
+      <url>https://api.bintray.com/maven/8k/maven/external/;publish=1</url>
+    </repository>
+  </distributionManagement>
+  
+  <dependencies>
+  
+    <!-- Google GSON -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+    <!-- Jackson2 -->
+    <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-2-version}</version>
+    </dependency>
+    <!-- Just the annotations; use this dependency if you want to attach annotations
+      to classes without connecting them to the code. -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson-2-version}</version>
+    </dependency>
+    <!-- databinding; ObjectMapper, JsonNode and related classes are here -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-2-version}</version>
+    </dependency>
+    <!-- Http Client-->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.1</version>
+    </dependency>
+    <!-- Logging -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.11</version>
+    </dependency>
+
+
+  </dependencies>
+</project>
