@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.apimedic</groupId>
   <artifactId>symptomchecker</artifactId>
-  <version>0.1-alpha</version>
+  <version>0.1</version>
   <packaging>jar</packaging>
   
   <properties>
@@ -17,6 +17,33 @@
       <url>https://api.bintray.com/maven/8k/maven/external/;publish=1</url>
     </repository>
   </distributionManagement>
+  
+  <build>
+    <plugins>    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin> 
+      <!-- some error with deploying sources maybe automatic
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <sources>${project.build.directory}/${project.build.finalName}-sources.jar</sources>
+        </configuration>
+      </plugin>
+      -->
+    </plugins>
+  </build>
+
   
   <dependencies>
   
